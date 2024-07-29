@@ -1,0 +1,119 @@
+.container.contact-page {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1; /* Ensure it appears above the navbar */
+}
+
+.text-zone {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 20px;
+    text-align: center;
+
+    h1 {
+        font-size: 36px;
+        color: #ffd700;
+        padding-top: 60px; /* Add padding to push it below the navbar */
+    }
+
+    p {
+        color: #fff; /* Set paragraph color to white */
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+}
+
+.contact-form {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    ul {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        max-width: 600px;
+
+        li {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            margin-bottom: 10px;
+            opacity: 0;
+            overflow: hidden;
+            display: block;
+            clear: both;
+            position: relative;
+            animation: fadeInUp 2s 2s;
+            animation-fill-mode: forwards;
+
+            &.half {
+                width: 48%;
+                margin-left: 2%;
+                float: left;
+                clear: none;
+
+                &:first-child {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+
+    input[type='text'],
+    input[type='email'],
+    textarea {
+        width: 100%;
+        border: 0;
+        background: #115173;
+        height: 50px;
+        font-size: 16px;
+        color: #fff;
+        padding: 0 20px;
+        box-sizing: border-box;
+        margin-top: 10px;
+
+        &:focus {
+            outline: none;
+            border: 2px solid #ffd700;
+        }
+    }
+
+    textarea {
+        min-height: 150px;
+        padding: 20px;
+    }
+
+    .flat-button {
+        color: #ffd700;
+        font-size: 16px;
+        letter-spacing: 3px;
+        text-decoration: none;
+        padding: 10px 20px;
+        border: 1px solid #ffd700;
+        border-radius: 4px;
+        background: transparent;
+        text-transform: uppercase;
+        text-align: center;
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .map-wrap {
+        float: none;
+        margin: 0;
+        width: 100%;
+        height: 400px;
+    }
+
+    .info-map {
+        display: none;
+    }
+}
